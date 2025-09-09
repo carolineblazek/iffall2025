@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-image: url("https://preview.redd.it/high-quality-in-rainbows-desktop-background-v0-vvq3pmz35pea1.jpg?width=1080&crop=smart&auto=webp&s=3b24cb949051659a707c47582761fada830a8b82");
+    height:100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+h1{
+  font-family: "Urbanist", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  color:rgb(255, 61, 61);
+  margin-left: 10%;
+  margin-right: 60%;
+  text-align: center;
+  font-size: 90px;
+  line-height: .5;
+}
+
+h2{
+  font-family: "Urbanist", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  color:rgb(255, 203, 60);
+  margin-left: 10%;
+  margin-right: 60%;
+  text-align: center;
+  font-size: 40px;
+}
+
+h3{
+  font-family: "Urbanist", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  color:rgb(87, 186, 225);
+  margin-left: 10%;
+  margin-right: 60%;
+  text-align: left;
+  font-size: 30px;
+  margin-top: 60px;
+}
+
+p{
+  font-family: "Urbanist", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+  color:rgb(255, 255, 255);
+  text-align: left;
+  margin-left: 10%;
+  margin-right: 60%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  line-height: 1;
+}
+
+iframe{
+  margin-left: 10%;
+  margin-right: 10%; 
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
