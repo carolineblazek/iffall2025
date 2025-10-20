@@ -1,0 +1,538 @@
+@import url('https://fonts.googleapis.com/css2?family=Caprasimo&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+html{
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+}
+
+body{
+    margin-left: 08%;
+    margin-right: 08%;
+    margin-top: 04%;
+    margin-bottom: 0;
+}
+
+/*header*/
+h1{
+    font-family: "Caprasimo", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: clamp(36px, 8vw, 110px);
+    text-align: center; 
+    line-height: 1.1;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: lightskyblue;
+}
+
+p, li, ol{
+    font-size: clamp(14px, 1.8vw, 18px);
+    line-height: 1.5;
+}
+
+.headercontent{
+    font-size: 18px;
+    width: 100%;
+    max-width: 700px;
+    line-height: 30px;
+    margin: 20px auto;
+    font-size: 16px;
+}
+
+p.author{
+    font-weight: 600;
+    font-size: 30px;
+}
+
+a{
+    color: lightskyblue;
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+hr{
+    background-color: lightgray;
+    height: 2px;
+    border: none;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    width: 100%;
+}
+
+.infobox p{
+    font-size: 20px;
+    font-weight: 600;
+    display: inline-block;
+    color: white;
+    background-color: lightskyblue;
+    border-radius: 10px;
+    padding: 6px 12px;
+    margin: 5px;
+}
+
+.header{
+    display: flex;
+    flex-wrap: wrap;
+    align-items:flex-start;
+    gap: 20px;
+}
+
+.carousel{
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  aspect-ratio: 4/5;
+  overflow: hidden;
+  margin: 20px auto;
+  border-radius: 10px;
+}
+
+.carousel img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+/*show selected image*/
+#img1:checked ~ .slides img:nth-child(1),
+#img2:checked ~ .slides img:nth-child(2),
+#img3:checked ~ .slides img:nth-child(3),
+#img4:checked ~ .slides img:nth-child(4),
+#img5:checked ~ .slides img:nth-child(5),
+#img6:checked ~ .slides img:nth-child(6),
+#img7:checked ~ .slides img:nth-child(7){
+  opacity: 1;
+}
+
+.carousel input{
+  display: none;
+}
+
+/*navigation arrow buttons*/
+.nav label{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: lightskyblue;
+  color: white;
+  padding: 15px;
+  cursor: pointer;
+  font-size: 20px;
+  border-radius: 50%;
+  display: none;
+}
+
+.nav label:hover{
+    background-color: deepskyblue;
+}
+
+/*navigation slides*/
+#img1:checked ~ .nav label:nth-child(1),
+#img1:checked ~ .nav label:nth-child(2),
+#img2:checked ~ .nav label:nth-child(3),
+#img2:checked ~ .nav label:nth-child(4),
+#img3:checked ~ .nav label:nth-child(5),
+#img3:checked ~ .nav label:nth-child(6),
+#img4:checked ~ .nav label:nth-child(7),
+#img4:checked ~ .nav label:nth-child(8),
+#img5:checked ~ .nav label:nth-child(9),
+#img5:checked ~ .nav label:nth-child(10),
+#img6:checked ~ .nav label:nth-child(11),
+#img6:checked ~ .nav label:nth-child(12),
+#img7:checked ~ .nav label:nth-child(13),
+#img7:checked ~ .nav label:nth-child(14){
+  display: block;
+}
+
+.nav .prev{
+  left: 20px;
+}
+
+.nav .next{
+  right: 20px;
+}
+
+/*mobile image*/
+.mobileimage{
+    display: none;
+}
+
+
+/*equipment and notes*/
+h2{
+    font-size: clamp(36px, 6vw, 80px);
+    font-family: "Caprasimo", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: lightskyblue;
+    margin: 10px;
+    white-space: nowrap;
+}
+
+p.notetext{
+    font-size: clamp (14px 1.8vw, 18px);
+    line-height: 1.5;
+    margin: 10px;
+}
+
+ul{
+    list-style-type: none;
+    padding-left: 20px;
+    font-size: clamp(14px, 1.8vw, 18px);
+    line-height: 1.5;
+}
+
+.equipmentnotes{
+    display: flex;
+    align-items: stretch;
+    gap: 20px;
+}
+
+.equipmentnotes, .ingredientsdirections{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.equipment, .notes, .ingredients, .instructions{
+    flex: 1 1 300px;
+    height: auto;
+    max-height: none;
+    overflow: visible;
+}
+
+.equipment, .notes{
+    border: 5px solid lightskyblue;
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    flex: 1;
+    margin-bottom: 20px;
+}
+
+
+/*ingredients and instructions*/
+.ingredientsdirections{
+    display: flex;
+    align-items: stretch;
+    gap: 20px;
+}
+
+.ingredients, .instructions{
+    height: 1350px;
+    overflow-y: auto;
+    border: 5px solid lightskyblue;
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+/*ingredient buttons*/
+input[type="radio"]{
+    display: none;
+}
+
+label[for^="btn"]{
+    display: inline-block;
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    border-radius: 50%;
+    text-align: center;
+    border: 3px solid lightskyblue;
+    font-size: 20px;
+    margin: 8px;
+    cursor: pointer;
+    color: lightskyblue;
+    background-color: white;
+}
+
+#btn1x:hover + label[for="btn1x"],
+#btn2x:hover + label[for="btn2x"],
+#btn3x:hover + label[for="btn3x"]{
+    color: white;
+    background-color: deepskyblue;
+    border-color: deepskyblue;
+}
+
+#btn1x:checked + label[for="btn1x"],
+#btn2x:checked + label[for="btn2x"],
+#btn3x:checked + label[for="btn3x"] {
+    background-color: lightskyblue;
+    border-color: lightskyblue;
+    color: white;
+}
+
+.list{
+    display: none;
+    margin: 0 auto;
+    text-align: left;
+    width: fit-content;
+}
+
+#btn1x:checked ~ .list1x, #btn2x:checked ~ .list2x, #btn3x:checked ~ .list3x{
+    display: none;
+}
+
+.button-row:has(#btn1x:checked) ~ .list1x{
+    display: block;
+}
+.button-row:has(#btn2x:checked) ~ .list2x{
+    display: block;
+}
+.button-row:has(#btn3x:checked) ~ .list3x{
+    display: block;
+}
+
+.serving-buttons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 0px 0px 0px;
+}
+
+.button-row{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+/*list styling*/
+h3{
+    font-size: clamp(18px, 2vw, 22px);
+    font-weight: 700;
+    margin: 20px 0px 5px 0px;
+}
+
+.ingredients{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+.ingredients label:hover, .equipment label:hover{
+    color: deepskyblue;
+}
+
+label:has(input[type="checkbox"]:checked) {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.ingredients ul li{
+    text-align: left;
+    margin-left: 10px;
+}
+
+.ingredientssection{
+    margin-bottom: 30px;
+}
+
+.instructionssections{
+    margin: 20px 0px 10px 0px;
+}
+
+ol{
+    font-size: 18px;
+    line-height: 25px;
+    margin-top: 0;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+ol li::marker{
+    color: lightskyblue;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.instructions{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+.instructions h3, .instructions ol{
+    width: 100%;
+    max-width: 95%;
+    box-sizing: border-box;
+}
+
+.instructions ol img{
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+
+.instructions *{
+    max-width: 100%;
+    box-sizing: border-box;
+    word-wrap: break-word;
+}
+
+/*scrollbar*/
+.ingredients::-webkit-scrollbar, .instructions::-webkit-scrollbar{
+    width: 20px;
+}
+
+.ingredients::-webkit-scrollbar-track, .instructions::-webkit-scrollbar-track{
+    background: white;
+    border-left: 5px solid white;
+    border-radius: 0 10px 10px 0;
+}
+
+.ingredients::-webkit-scrollbar-thumb, .instructions::-webkit-scrollbar-thumb{
+    background-color: lightskyblue;
+    border-radius: 10px;
+    border: 5px solid white;
+}
+
+
+/*footer*/
+.footer{
+    background-color: lightskyblue;
+    color: white;
+    text-align: center;
+    padding: 40px 0;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    box-sizing: border-box;
+    margin-top: 50px;
+}
+
+.footer p{
+    margin: 10px 10px;
+    font-size: 18px;
+    line-height: 25px;
+}
+
+.footer a{
+    color: white;
+}
+
+@media (max-width: 768px){
+    .header{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .headercontent{
+        width: 90%;
+    }
+
+    div.headercontent{
+        margin-bottom: 0;
+    }
+
+    h1{
+        font-size: 45px;
+    }
+
+    p{
+        font-size: 18px;
+        margin-bottom: 5px;
+    }
+
+    p.author{
+        font-size: 18px;
+    }
+
+    .infobox p{
+        font-size: 11px;
+        padding: 2px 11px;
+        margin: 4px 2px 4px 2px;
+    }
+
+    .carousel{
+        display: none;
+    }
+
+    .mobileimage{
+        display: block;
+        position: relative;
+        width: 100%;
+        max-width: 500px;
+        aspect-ratio: 4/5;
+        overflow: hidden;
+        margin: 0;
+        border-radius: 10px;
+    }
+
+    .mobileimage img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+        display: block;
+    }
+
+    hr{
+        margin: 30px auto;
+        width: 100%;
+    }
+
+    .equipmentnotes, .ingredientsdirections{
+        flex-direction: column;
+    }
+
+    .ingredients, .instructions{
+        max-height: 42vh;
+        overflow-y: auto;
+    }
+
+    div.equipment, div.notes{
+        margin:0;
+    }
+
+    h2{
+        font-size: 40px;
+    }
+
+    li{
+        font-size: 18px;
+    }
+
+    p.notetext{
+        font-size: 18px;
+    }
+
+    .ingredients{
+        overflow-y: auto;
+    }
+
+    .ingredients ul{
+        padding-right: 20px;
+    }
+
+    .instructions h3{
+        margin-left: 30px;
+    }
+}
