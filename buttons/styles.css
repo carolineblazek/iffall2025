@@ -1,0 +1,568 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chewy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+            body {
+	            color: #333;
+	            font-family: 'Open Sans', sans-serif;
+	            margin: 0;
+	            padding: 0;
+            }
+
+            main {
+	            margin: 40px;
+            }
+
+			h1 {
+			 	font-size: 30px;
+			 	margin-bottom: 40px;
+			}
+
+			.button_container {
+				display: flex;
+                justify-content: center;
+                align-items: center;
+                border: 1px solid #ddd;
+				margin: 0 10px 10px 0;
+				padding: 20px;
+				width: 300px;
+				height: 300px;
+				float: left;
+				overflow: hidden;
+				box-sizing: border-box;
+				text-align: center;
+			}
+
+			a#btn_spotify {
+				display: inline-block;
+				height: 50px;
+				box-sizing: border-box;
+				border-radius: 25px;
+				margin: auto;
+				margin-top: 100px;
+				padding: 10px 40px 0 40px;
+				background-color: #2ebd59;
+				border: 2px solid #2ebd59;
+				color: #fff;
+				font-size: 20px;
+				font-family: 'Montserrat', sans-serif;
+				font-weight: bold;
+				text-decoration: none;
+				transition: all .5s;
+			}
+
+			a#btn_spotify:hover {
+				background-color: #fff;
+				border: 2px solid #000;
+				color: #000;
+			}
+
+			a#btn_amazon {
+				display: block;
+				width: 100px;
+				height: 100px;
+				box-sizing: border-box;
+				border-radius: 50px;
+				margin: auto;
+				margin-top: 75px;
+				padding-top: 8px;
+				background-color: #232f3e;
+				color: #fff;
+				text-align: center;
+				font-size: 60px;
+				transition: all .2s;
+			}
+
+			a#btn_amazon:hover {
+				background-color: #fc9a18;
+			}
+
+			a#btn_twitter {
+				display: inline-block;
+				height: 40px;
+				box-sizing: border-box;
+				border-radius: 4px;
+				margin: auto;
+				margin-top: 105px;
+				padding: 10px 30px 0 30px;
+				background-color: #56cdf1;
+				color: #fff;
+				font-size: 18px;
+				font-family: 'Arial', sans-serif;
+				font-weight: bold;
+				text-decoration: none;
+			}
+
+			a#btn_twitter:hover {
+
+				/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#2ebfec+0,28a5cb+100 */
+				background: rgb(46,191,236); /* Old browsers */
+				background: -moz-linear-gradient(-45deg,  rgba(46,191,236,1) 0%, rgba(40,165,203,1) 100%); /* FF3.6-15 */
+				background: -webkit-linear-gradient(-45deg,  rgba(46,191,236,1) 0%,rgba(40,165,203,1) 100%); /* Chrome10-25,Safari5.1-6 */
+				background: linear-gradient(135deg,  rgba(46,191,236,1) 0%,rgba(40,165,203,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2ebfec', endColorstr='#28a5cb',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+			}
+
+			a#btn_indiegogo {
+				display: inline-block;
+				position: relative;
+				margin:auto;
+				margin-top: 100px;
+				padding: 8px 16px;
+				background-color: #fff;
+				color: #eb1478;
+				font-family: 'Ubuntu', sans-serif;
+				font-size: 30px;
+				font-weight: bold;
+				text-transform: uppercase;
+				text-decoration: none;
+				letter-spacing: -2px;
+				transition: all .2s;
+			}
+
+			a#btn_indiegogo:before {
+				content: "";
+				display: block;
+				width: 0;
+				height: 0;
+				z-index: 1;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				background-color: #eb1478;
+				transition: all .5s;
+			}
+
+			a#btn_indiegogo:hover {
+				color: #fff;
+			}
+
+			a#btn_indiegogo:hover:before {
+				width: 100%;
+				height: 100%;
+				left: 0;
+				top: 0;
+			}
+
+			a#btn_indiegogo span {
+				position: relative;
+				z-index: 10;
+			}
+
+            a#btn_samsung{
+                font-size: 0;
+                display: block;
+                width: 200px;
+                height: 100px;
+                background-image: url("icons/samsunglogo.png");
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+                position: relative;
+                transition: all 0.5s ease;
+            }
+
+            a#btn_samsung::before{
+                content: "";
+                position: absolute;
+                inset: 0;
+                top: 10px;
+                background-image: url("icons/samsunglogoblue.png");
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+                opacity: 0;
+                transform: scale(1.7);
+                transition: opacity 0.5s ease;
+            }
+
+            a#btn_samsung:hover::before{
+                opacity: 1;
+            }
+
+            a#btn_missouribotanicalgarden{
+                display: block;
+                width: 200px;
+                height: 200px;
+                background-image: url("icons/mobot-header-logo.svg");
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+                position: relative;
+                font-size: 15px;
+                text-decoration: none;
+                transition: all 0.3s ease;
+            }
+
+            a#btn_missouribotanicalgarden .flower{
+                position: absolute;
+                opacity: 0;
+                transition: all 0.6s ease;
+            }
+            
+            .flower1{
+                top: 10%;
+                left: 50%;
+                }
+
+            .flower2{
+                top: 22%;
+                left: 58%;
+            }
+            .flower3{
+                top: 18%;
+                left: 38%;
+            } 
+            
+            a#btn_missouribotanicalgarden:hover {
+                filter: brightness(1.6);
+            }
+
+            a#btn_missouribotanicalgarden:hover .flower{
+                opacity: 1;
+                transform: scale(1.5) rotate(20deg);
+                color: #e44698;
+            }
+
+            a#btn_thenewyorker{
+                display: inline-block;
+                font-family: "Cinzel Decorative", serif;
+                font-size: 25px;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+                color: #000;
+                text-decoration: none;
+                border: 2px solid #000;
+                padding: 20px 20px;
+                background: #fff;
+                transition: all 0.4s ease;
+                position: relative;
+                overflow: hidden;
+            }
+
+            a#btn_thenewyorker::after{
+                width: 80%;
+            }
+
+            a#btn_thenewyorker:hover{
+                border: 2px solid red;
+                background-color: red;
+                color: #fff;
+                letter-spacing: 2px;
+            }
+
+            a#btn_pottermore{
+                font-family: 'MedievalSharp', cursive;
+                font-size: 24px;
+                text-transform: uppercase;
+                color: #f8d12f;
+                background-color: #1a1a1a;
+                border: 2px solid #f8d12f;
+                padding: 14px 30px;
+                text-decoration: none;
+                letter-spacing: 2px;
+                transition: all 0.4s ease;
+                position: relative;
+                overflow: hidden;
+                border-radius: 6px;
+            }
+
+            a#btn_pottermore:hover{
+                color: #fff;
+                background-color: #f8d12f;
+                box-shadow: 0 0 10px #f8d12f, 0 0 30px #f8d12f, 0 0 60px #f8d12f;
+                text-shadow: 0 0 8px #fff, 0 0 20px #f8d12f;
+                transform: translateY(-3px);
+            }
+
+            a#btn_pottermore::after{
+                content: "";
+                position: absolute;
+                top: 0;
+                left: -75%;
+                width: 50%;
+                height: 100%;
+                background: linear-gradient(
+                120deg,
+                rgba(255, 255, 255, 0) 0%,
+                rgba(255, 255, 255, 0.6) 50%,
+                rgba(255, 255, 255, 0) 100%
+                );
+                transform: skewX(-25deg);
+                transition: all 0.6s ease;
+            }
+
+            a#btn_pottermore:hover::after{
+                left: 125%;
+            }
+
+            a#btn_explodingkittens{
+                font-family: 'Chewy', cursive;
+                font-size: 24px;
+                text-transform: uppercase;
+                color: #fff;
+                background-color: #ff4b2b;
+                padding: 20px 20px;
+                text-decoration: none;
+                letter-spacing: 2px;
+                border-radius: 12px;
+                position: relative;
+                overflow: visible;
+                transition: all 0.3s ease;
+            }
+
+            a#btn_explodingkittens::after{
+                content: "💥";
+                position: absolute;
+                font-size: 80px;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%) scale(0);
+                opacity: 0;
+                transition: all 0.3s ease;
+                pointer-events: none;
+            }
+
+
+            a#btn_explodingkittens:hover{
+                transform: scale(1.2) rotate(-5deg);
+                background-color: #ff956e;
+            }
+
+            a#btn_explodingkittens:hover::after{
+                transform: translate(-50%, -50%) scale(2.5) rotate(10deg);
+                opacity: 1;
+            }
+
+            a#btn_harleydavidson{
+                font-size: 0;
+                display: inline-block;
+                width: 100px;
+                height: 100px;
+                background-image: url("icons/harleydavidsonlogoorange.jpg");
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+                text-decoration: none;
+                transition: transform 0.4s ease, filter 0.4s ease;
+                border-radius: 8px;
+                position: relative;
+                overflow: visible;
+            }
+
+            a#btn_harleydavidson:hover{
+                transform: scale(1.15);
+                filter: brightness(1.3) contrast(1.2);
+                animation: rumble 0.15s ease-in-out 0s 3;
+            }
+
+            a#btn_harleydavidson::before{
+                content: "";
+                position: absolute;
+                inset: 0;
+                background: linear-gradient(120deg, rgba(255,255,255,0.0) 0%, rgba(255,255,255,0.2) 50%, rgba(255,255,255,0.0) 100%);
+                opacity: 0;
+                transition: opacity 0.4s ease, transform 0.4s ease;
+                border-radius: 8px;
+                filter: blur(2px);
+                pointer-events: none;
+            }
+
+            a#btn_harleydavidson:hover::before{
+                opacity: 1;
+                transform: translateX(5px) rotate(15deg);
+            }
+
+            @keyframes rumble{
+                0% { transform: translate(0, 0) scale(1.15) rotate(0deg); }
+                25% { transform: translate(-2px, 1px) scale(1.15) rotate(-1deg); }
+                50% { transform: translate(2px, -1px) scale(1.15) rotate(1deg); }
+                75% { transform: translate(-1px, 2px) scale(1.15) rotate(-1deg); }
+                100% { transform: translate(0, 0) scale(1.15) rotate(0deg); }
+            }
+
+            a#btn_instagram{
+                display: inline-block;
+                width: auto;
+                height: auto;
+                background: none;
+                text-align: center;
+                line-height: normal;
+                text-decoration: none;
+                position: relative;
+                overflow: visible;
+                transition: transform 0.3s ease;
+            }
+
+            a#btn_instagram i{
+                font-size: 100px;
+                color: #555;
+                transition: all 0.4s ease;
+                display: inline-block;
+                vertical-align: middle;
+            }
+
+            a#btn_instagram:hover i{
+                transform: scale(1.3) rotate(10deg);
+                background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                color: transparent;
+            }
+
+            a#btn_cocacola{
+                display: inline-block;
+                font-family: 'Great Vibes', cursive;
+                font-size: 30px;
+                color: white;
+                background-color: red;
+                padding: 12px 40px;
+                text-decoration: none;
+                border-radius: 20px;
+                position: relative;
+                overflow: hidden;
+                transition: all 0.3s ease;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            }
+
+            a#btn_cocacola:hover{
+                transform: scale(1.05);
+                background-color: rgb(255, 67, 67);
+                box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+            }
+
+            a#btn_cocacola .bubble{
+                position: absolute;
+                font-size: 15px;
+                color: white;
+                pointer-events: none;
+                opacity: 0;
+            }
+
+            .bubble1{ left: 15%; bottom: 10px; font-size: 10px; animation-delay: 0s; }
+            .bubble2{ left: 35%; bottom: 10px; font-size: 14px; animation-delay: 0.6s; }
+            .bubble3{ left: 55%; bottom: 10px; font-size: 12px; animation-delay: 0.8s; }
+            .bubble4{ left: 75%; bottom: 10px; font-size: 11px; animation-delay: 0.4s; }
+            .bubble5{ left: 90%; bottom: 10px; font-size: 13px; animation-delay: 0.2s; }
+
+            a#btn_cocacola:hover .bubble{
+                animation-name: floatUpDrift;
+                animation-timing-function: ease-out;
+                animation-iteration-count: infinite;
+                animation-duration: 2s;
+            }
+
+            @keyframes floatUpDrift{
+                0% { transform: translate(0, 0) scale(0.5); opacity: 1; }
+                25% { transform: translateX(-5px) translateY(-20px) scale(0.6); opacity: 0.8; }
+                50% { transform: translateX(3px) translateY(-40px) scale(0.7); opacity: 0.6; }
+                75% { transform: translateX(-2px) translateY(-60px) scale(0.8); opacity: 0.4; }
+                100% { transform: translateX(0px) translateY(-80px) scale(1); opacity: 0; }
+            }
+
+            a#btn_mollyjogger{
+                font-family: 'Pacifico', cursive;
+                font-size: 24px;
+                color: darkolivegreen;
+                background-color: white;
+                border: 2px solid darkolivegreen;
+                padding: 14px 40px;
+                text-decoration: none;
+                border-radius: 16px;
+                display: inline-block;
+                position: relative;
+                overflow: visible;
+                transition: all 0.4s ease;
+            }
+
+            a#btn_mollyjogger:hover{
+                transform: scale(1.05);
+                background-color: darkolivegreen;
+                color: white;
+            }
+
+            a#btn_mollyjogger .leaf{
+                position: absolute;
+                font-family: FontAwesome;
+                font-size: 28px;
+                color: darkolivegreen;
+                opacity: 0;
+                pointer-events: none;
+                top: -10px;
+                left: 50%;
+                transform-origin: bottom center;
+                transition: all 0.4s ease;
+            }
+
+            a#btn_mollyjogger .leaf1{ transform: rotate(-25deg); }
+            a#btn_mollyjogger .leaf2{ transform: rotate(0deg); }
+            a#btn_mollyjogger .leaf3{ transform: rotate(25deg); }
+
+            a#btn_mollyjogger:hover .leaf1{
+                opacity: 1;
+                transform: translate(-20px, -40px) rotate(-45deg);
+            }
+
+            a#btn_mollyjogger:hover .leaf2{
+                opacity: 1;
+                transform: translate(0px, -45px) rotate(10deg);
+            }
+
+            a#btn_mollyjogger:hover .leaf3{
+                opacity: 1;
+                transform: translate(25px, -40px) rotate(50deg);
+            }
+
+            a#btn_michaelkors{
+                font-family: 'Poppins', sans-serif;
+                font-size: 20px;
+                font-weight: 500;
+                text-transform: uppercase;
+                color: #000;
+                background-color: #fff;
+                border: 2px solid #D4AF37;
+                padding: 20px 40px;
+                text-decoration: none;
+                display: inline-block;
+                position: relative;
+                overflow: hidden;
+                transition: all 0.3s ease;
+            }
+
+            a#btn_michaelkors:hover{
+                transform: scale(1.05);
+                background-color: #D4AF37;
+                color: #fff;
+                box-shadow: 0 4px 12px rgba(212, 175, 55, 0.6);
+            }
+
+            a#btn_michaelkors::after{
+                content: "";
+                position: absolute;
+                bottom: 10px;
+                left: -100%;
+                width: 100%;
+                height: 2px;
+                background: #fff;
+                transition: all 0.5s ease;
+            }
+
+            a#btn_michaelkors::before{
+                content: "";
+                position: absolute;
+                top: 10px;
+                left: -100%;
+                width: 100%;
+                height: 2px;
+                background: #fff;
+                transition: all 0.5s ease;
+            }
+
+            a#btn_michaelkors:hover::after,
+            a#btn_michaelkors:hover::before{
+                left: 0;
+            }
