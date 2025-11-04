@@ -1,0 +1,16 @@
+.mockup-pair{
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+img{
+  max-width: 50%;
+  height: auto;
+}
+
+body{
+  font-family: Arial, sans-serif;
+  margin: 50px;
+}
