@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Russo+One&display=swap');
+
+html, body{
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    background-color: #0B0071;
+}
+
+.navbar{
+    background-color: #2C4EF7;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 2rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 70px;
+    z-index: 1000;
+}
+
+.navbar img{
+    height: 50px;
+    width: auto;
+}
+
+.navlinks{
+    display: flex;
+    gap: 2rem;
+}
+
+.navlinks a{
+    font-family: "Russo One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+.navlinks a.active{
+    color: #FFD04E;
+}
+
+.navlinks a:hover{
+    color: orange;
+    cursor: pointer;
+}
+
+.history{
+    position: relative;
+    padding: 80px 0px 0px 0px;
+}
+
+.history::before{
+    content: "";
+    position: absolute;
+    top: 700px;
+    bottom: 100px;
+    left: 100px;
+    width: 10px;
+    background-color: white;
+    z-index: 0;
+}
+
+.history::after, .history .timeline-end{
+    content: "";
+    position: absolute;
+    left: 90px;
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.history::after{
+    top: 690px;
+}
+
+.history .timeline-end{
+    bottom: 95px;
+}
+
+.landing{
+    background-color: #657FFF;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4rem 6rem;
+    gap: 3rem;
+}
+
+.landing img{
+    width: 45%;
+    height: auto;
+    border-radius: 10px;
+    border: 5px solid #FFD04E;
+}
+
+.description{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+    max-width: 50%;
+}
+
+.description h1{
+    font-family: "Russo One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2rem;
+    margin: 0;
+}
+
+.description p{
+    font-family: "Exo 2", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.description button{
+    font-family: "Russo One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #2C4EF7;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 0.75rem 2rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.description button:hover{
+    background-color: orange;
+}
+
+.earlyspace, .classicspace, .futuron, .mtron, .blacktron, .iceplanet{
+    display: flex;
+    justify-content: center;
+    padding: 4rem 2rem;
+}
+
+.earlyspace{
+    background-color: #4766FF;
+}
+
+.earlyspace .event{
+    background-color: #657FFF;
+}
+
+.classicspace{
+    background-color: #3053FF;
+}
+
+.classicspace .event{
+    background-color: #4766FF;
+}
+
+.futuron{
+    background-color: #2244EA;
+}
+
+.futuron .event{
+    background-color: #3053FF;
+}
+
+.mtron{
+    background-color: #0F22CF;
+}
+
+.mtron .event{
+    background-color: #2244EA;
+}
+
+.blacktron{
+    background-color: #1F10A3;
+}
+
+.blacktron .event{
+    background-color: #0F22CF;
+}
+
+.iceplanet{
+    background-color: #0B0071;
+}
+
+.iceplanet .event{
+    background-color: #1F10A3;
+}
+
+.event{
+    position: relative;
+    z-index: 1;
+    margin-left: 140px;
+    border-radius: 20px;
+    padding: 2rem 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+    max-width: 1000px;
+    width: 90%;
+    color: white;
+}
+
+.event::before{
+    content: "";
+    position: absolute;
+    left: -203px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 60px;
+    height: 60px;
+    background-color: white;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.eventdesc{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    max-width: 50%;
+}
+
+.eventdesc h1{
+    font-family: "Russo One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+.eventdesc p{
+    font-family: "Exo 2", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.dateimage{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.dateimage h2{
+    background-color: white;
+    color: #2C4EF7;
+    border-radius: 25px;
+    padding: 1rem 1.5rem;
+    font-family: "Russo One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+.dateimage img{
+    width: 350px;
+    height: auto;
+    border-radius: 10px;
+}
+
+footer{
+    font-family: "Exo 2", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    background-color: #0B0071;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 3rem;
+    margin: 1rem 0 1rem 0;
+    font-size: 1rem;
+}
+
+footer p{
+    margin: 0;
+}

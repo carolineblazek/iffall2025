@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Russo+One&display=swap');
+
+html, body{
+    margin: 0;
+    padding: 0;
+    background-color: #0B0071;
+}
+
+.navbar{
+    background-color: #2C4EF7;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 2rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 70px;
+    z-index: 1000;
+}
+
+.navbar img{
+    height: 50px;
+    width: auto;
+}
+
+.navlinks{
+    display: flex;
+    gap: 2rem;
+}
+
+.navlinks a{
+    font-family: "Russo One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+.navlinks a.active{
+    color: #FFD04E;
+}
+
+.navlinks a:hover{
+    color: orange;
+    cursor: pointer;
+}
+
+.story{
+    padding: 80px 0px 0px 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.landing{
+    background-color: #657FFF;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4rem 6rem;
+    gap: 3rem;
+}
+
+.landing img{
+    width: 45%;
+    height: auto;
+    border-radius: 10px;
+    border: 5px solid #FFD04E;
+}
+
+.description{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+    max-width: 50%;
+}
+
+.description h1{
+    font-family: "Russo One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2rem;
+    margin: 0;
+}
+
+.description p{
+    font-family: "Exo 2", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+strong{
+    font-weight: 700;
+}
+
+.description button{
+    font-family: "Russo One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #2C4EF7;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 0.75rem 2rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.description button:hover{
+    background-color: orange;
+}
+
+.factions-section{
+    background-color: #0B0071;
+    padding: 4rem 6rem;
+}
+
+.factions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    width: 85%;
+    max-width: 1200px;
+    margin: 0 auto 4rem auto;
+}
+
+.faction {
+    border-radius: 15px;
+    overflow: hidden;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: 500px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.faction.classicastronauts{
+    background-color: #657FFF;
+}
+
+.faction.futuron{
+    background-color: #4766FF;
+}
+
+.faction.blacktron{
+    background-color: #3053FF;
+}
+
+.faction.mtron{
+    background-color: #2244EA;
+}
+
+.faction.blacktronfuture{
+    background-color: #0F22CF;
+}
+
+.faction.iceplanet{
+    background-color: #1F10A3;
+}
+
+.faction:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.factionimage{
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+}
+
+.factionimage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.factiondesc{
+    padding: 1rem 1.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-grow: 1;
+}
+
+.factiondesc h1 {
+    font-family: "Russo One", sans-serif;
+    font-weight: 400;
+    font-size: 1.5rem;
+    margin: 0.5rem 0;
+}
+
+.factiondesc h2 {
+    font-family: "Exo 2", sans-serif;
+    font-weight: 500;
+    font-size: 1.1rem;
+    color: #FFD04E;
+    margin-bottom: 0.75rem;
+}
+
+.factiondesc p {
+    font-family: "Exo 2", sans-serif;
+    font-weight: 300;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin: 0;
+}
+
+footer{
+    font-family: "Exo 2", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    background-color: #0B0071;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 3rem;
+    margin: 1rem 0 1rem 0;
+    font-size: 1rem;
+}
+
+footer p{
+    margin: 0;
+}
