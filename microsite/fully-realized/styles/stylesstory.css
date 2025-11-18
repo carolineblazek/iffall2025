@@ -1,0 +1,493 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Russo+One&display=swap');
+
+html, body{
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    background-color: #0B0071;
+}
+
+.navbar{
+    background-color: #2C4EF7;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 3rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    z-index: 9999;
+}
+
+.navbar img{
+    height: 80px;
+    width: auto;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.navbar img:hover{
+    transform: scale(1.1);
+}
+
+.navlinks{
+    display: flex;
+    gap: 2rem;
+}
+
+.navlinks a{
+    font-family: "Russo One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+.navlinks a.active{
+    color: #FFD04E;
+}
+
+.navlinks a:hover{
+    color: orange;
+    cursor: pointer;
+}
+
+.story{
+    padding: 80px 0px 0px 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.landing{
+    background-color: #657FFF;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6rem 7rem;
+    gap: 3rem;
+}
+
+.img-frame{
+    overflow: hidden;
+    border-radius: 20px;
+    border: 10px solid #FFD04E;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.landing-frame{
+    width: 150rem;
+    height: 500px;
+    filter: drop-shadow(30px 30px #2C4EF7);
+}
+
+.landing-frame img{
+    width: auto;
+    height: 100%;
+    object-fit: cover;
+    object-position: 130px 0px;
+}
+
+.description{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+    max-width: 50%;
+    margin: 0rem 8rem 0rem 8rem;
+}
+
+.description h1{
+    font-family: "Russo One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 3rem;
+    margin: 0;
+}
+
+.description p{
+    font-family: "Exo 2", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1.5rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+strong{
+    font-weight: 700;
+}
+
+.description a{
+    margin-top: 1rem;
+    align-self: center;
+}
+
+.description button{
+    font-family: "Russo One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #2C4EF7;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 1.5rem 2rem;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.description button:hover{
+    background-color: orange;
+}
+
+/* ----------------- FACTION CARDS ----------------- */
+
+/* Factions grid */
+.factions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    width: 85%;
+    max-width: 1200px;
+    margin: 0 auto 4rem auto;
+}
+
+/* Card container with 3D perspective */
+.faction {
+    perspective: 1000px;
+    height: 500px;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Lift effect on hover */
+.faction:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Inner container for flipping */
+.faction-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+/* Flip on hover */
+.faction:hover .faction-inner {
+    transform: rotateY(180deg);
+}
+
+/* Front and Back shared styles */
+.faction-front,
+.faction-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+}
+
+/* Front */
+.faction-front {
+    background-color: inherit; /* faction color */
+    color: white;
+}
+
+/* Back */
+.faction-back {
+    background-color: #FFD04E;
+    color: white;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    padding: 0;
+}
+
+/* Inner content container for back */
+.faction-back .factiondesc {
+    padding: 1.5rem 1.5rem; /* padding for text */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-grow: 1;
+}
+
+/* Text styling */
+.faction-back h1,
+.faction-back h2,
+.faction-back p {
+    margin: 0.3rem 0;
+    font-family: inherit;
+}
+
+.faction-back h1 {
+    font-family: "Russo One", sans-serif;
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+.faction-back h2 {
+    font-family: "Exo 2", sans-serif;
+    font-weight: 500;
+    font-size: 1.1rem;
+    color: #3053FF;
+    margin-bottom: 0.5rem;
+}
+
+.faction-back p {
+    font-family: "Exo 2", sans-serif;
+    font-weight: 300;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* Faction-specific front colors */
+.faction.classicastronauts .faction-front { background-color: #657FFF; }
+.faction.futuron .faction-front { background-color: #4766FF; }
+.faction.blacktron .faction-front { background-color: #3053FF; }
+.faction.mtron .faction-front { background-color: #2244EA; }
+.faction.blacktronfuture .faction-front { background-color: #0F22CF; }
+.faction.iceplanet .faction-front { background-color: #1F10A3; }
+
+/* Images */
+.factionimage {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.factionimage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Description text */
+.factiondesc {
+    padding: 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-grow: 1;
+}
+
+.factiondesc h1 {
+    font-family: "Russo One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    font-size: 2rem;
+    margin: 0.5rem 0 0 0;
+}
+
+.factiondesc h2 {
+    font-family: "Exo 2", sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #FFD04E;
+    margin: .5rem 0;
+}
+
+.factiondesc p {
+    font-family: "Exo 2", sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.faction-back > .factiondesc p{
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #0B0071;
+    padding: 1.5rem 1.5rem;
+}
+
+footer{
+    font-family: "Exo 2", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    background-color: #0B0071;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 3rem;
+    margin: 1rem 0 1rem 0;
+    font-size: 1rem;
+}
+
+footer p{
+    margin: 0;
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        height: 70px;
+        padding: 0.5rem 0.5rem;
+    }
+
+    .navbar img {
+        height: 45px;
+    }
+
+    .navlinks {
+        display: flex;
+        gap: 1rem;
+    }
+
+    .navlinks a {
+        font-size: 1rem;
+    }
+
+    .history {
+        padding-top: 85px;
+    }
+
+    .landing{
+        position: relative;
+        flex-direction: column;
+        padding: 3rem 1.5rem;
+        gap: 1.5rem;
+        text-align: center;
+        align-items: center;
+    }
+
+    .description{
+        max-width: 100%;
+        margin: 0;
+        align-items: center;
+        text-align: center;
+    }
+
+    .description h1{
+        font-size: 3rem;
+        line-height: 1.2;
+    }
+
+    .description p{
+        font-size: 1.4rem;
+    }
+
+    .description button{
+        font-size: 1.8rem;
+        padding: 0.8rem 1.2rem;
+    }
+
+    .landing-frame{
+        margin: 1.5rem 0;
+        width: 90%;
+        height: auto;
+        border-width: 8px;
+        filter: drop-shadow(15px 15px #2C4EF7);
+    }
+
+    .landing-frame img{
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        object-position: 0px 0px;
+    }
+
+    .factions-grid {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .faction {
+        width: 90%;
+        max-width: 350px;
+        height: 550px;
+        margin: 0 auto;
+    }
+
+    .faction-inner {
+        height: 100%;
+    }
+
+    .factionimage {
+        height: 250px;
+    }
+
+    .factionimage img {
+        border-radius: 8px;
+    }
+
+    /* FRONT TEXT STYLES */
+    .factiondesc {
+        padding: 2rem 2rem;
+    }
+
+    .factiondesc h1 {
+        font-size: 1.8rem;
+    }
+
+    .factiondesc h2 {
+        font-size: 1.5rem;
+    }
+
+    .factiondesc p {
+        font-size: 1.2rem;
+        line-height: 1.4;
+    }
+
+    /* BACK SIDE TEXT */
+    .faction-back .factiondesc {
+        padding: 2rem;
+        overflow-y: auto;
+    }
+
+    .faction-back p {
+        font-size: 1rem;
+        line-height: 1.4;
+    }
+
+    .faction-back::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    .faction-back::-webkit-scrollbar-thumb {
+        background: rgba(0,0,0,0.2);
+        border-radius: 3px;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5rem;
+        padding: 30px 30px;
+    }
+
+    footer p{
+        padding: 0 5rem;
+    }
+}
