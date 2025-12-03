@@ -1,0 +1,450 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Russo+One&display=swap');
+
+html, body{
+    margin: 0;
+    padding: 0;
+    background-color: #0B0071;
+    overflow-x: hidden;
+}
+
+.navbar{
+    background-color: #2C4EF7;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 3rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    z-index: 9999;
+    overflow: hidden;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.navbar img{
+    height: 80px;
+    width: auto;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.navbar img:hover{
+    transform: scale(1.1);
+}
+
+.navlinks{
+    display: flex;
+    gap: 2rem;
+}
+
+.navlinks a{
+    font-family: "Russo One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+.navlinks a.active{
+    color: #FFD04E;
+}
+
+.navlinks a:hover{
+    color: orange;
+    cursor: pointer;
+}
+
+.home{
+    padding: 80px 0px 0px 0px;
+}
+
+.landing{
+    background-color: #0B0071;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6rem 7rem;
+    gap: 3rem;
+}
+
+.img-frame {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 10px solid #FFD04E;
+    border-radius: 20px;
+    overflow: visible;
+}
+
+.landing-frame {
+    filter: drop-shadow(30px 30px #2C4EF7);
+    width: 120rem;
+}
+
+.img-frame img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.floating-img-one{
+    position: absolute;
+    top: 100px;
+    left: 650px;
+    width: 300px !important;
+    z-index: 9998;
+    border: none !important;
+    border-radius: 0 !important;
+    transform: rotate(-15deg);
+    transition: transform 0.3s ease;
+    filter: none !important;
+}
+
+.floating-img-one:hover {
+    transform: rotate(10deg) scale(1.1);
+}
+
+.description{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+    max-width: 50%;
+    margin: 0rem 8rem 0rem 5rem;
+}
+
+.description h1{
+    font-family: "Russo One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 4rem;
+    margin: 0;
+}
+
+.description p{
+    font-family: "Exo 2", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1.5rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+strong{
+    font-weight: 700;
+}
+
+.description a {
+    margin-top: 1rem;
+    align-self: center;
+}
+
+.description button{
+    font-family: "Russo One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #2C4EF7;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 1.5rem 2rem;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.description button:hover{
+    background-color: orange;
+}
+
+.secondary{
+    background-color: #2C4EF7;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6rem 7rem;
+    gap: 3rem;
+}
+
+.floating-img-two{
+    position: absolute;
+    top: 1100px;
+    left: 300px;
+    width: 400px !important;
+    z-index: 9998;
+    border: none !important;
+    border-radius: 0 !important;
+    transform: rotate(5deg);
+    transition: transform 0.3s ease;
+    filter: none !important;
+}
+
+.floating-img-two:hover {
+    transform: rotate(-15deg) scale(1.1);
+}
+
+.secondary-frame {
+    filter: drop-shadow(30px 30px #0B0071);
+    width: 120rem;
+}
+
+.description-secondary{
+    margin: 0rem 4rem 0rem 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+    max-width: 50%;
+}
+
+.description-secondary h1{
+    font-family: "Russo One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 4rem;
+    margin: 0;
+}
+
+.description-secondary p{
+    font-family: "Exo 2", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1.5rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+footer{
+    font-family: "Exo 2", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    background-color: #0B0071;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 3rem;
+    margin: 1rem 0 1rem 0;
+    font-size: 1rem;
+}
+
+footer p{
+    margin: 0;
+}
+
+@media (max-width: 900px) {
+    .navbar {
+        height: 90px;
+        padding: 0.5rem 2rem;
+    }
+
+    .navbar img {
+        height: 65px;
+    }
+
+    .navlinks a {
+        font-size: 1.25rem;
+    }
+
+    .landing,
+    .secondary {
+        padding: 4rem 3rem;
+        gap: 2rem;
+        flex-direction: row;
+        text-align: left;
+    }
+
+    .description,
+    .description-secondary {
+        max-width: 55%;
+        margin: 0;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .description h1,
+    .description-secondary h1 {
+        font-size: 2.6rem;
+        line-height: 1.2;
+    }
+
+    .description p,
+    .description-secondary p {
+        font-size: 1.25rem;
+    }
+
+    .description button {
+        font-size: 1.5rem;
+        padding: 0.75rem 1.2rem;
+    }
+
+    .landing-frame,
+    .secondary-frame {
+        width: 60%;
+        border-width: 10px;
+        filter: drop-shadow(20px 20px #2C4EF7);
+    }
+
+    .secondary-frame {
+        filter: drop-shadow(20px 20px #0B0071);
+    }
+
+    .landing-frame img,
+    .secondary-frame img {
+        width: 100%;
+        height: auto;
+    }
+
+    .floating-img-one,
+    .floating-img-two {
+        max-width: none;
+        z-index: 20;
+    }
+
+    .floating-img-one {
+        top: 150px;
+        left: 600px;
+        width: 260px !important;
+        transform: rotate(-8deg);
+    }
+
+    .floating-img-two {
+        top: 700px;
+        left: 80px;
+        width: 320px !important;
+    }
+
+    footer {
+        padding: 2rem 2rem;
+        gap: 0.75rem;
+    }
+}
+
+@media (max-width: 700px) {
+    .navbar {
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        height: 85px;
+        padding: 0.5rem 0.5rem;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .navbar img {
+        height: 45px;
+    }
+
+    .navlinks {
+        display: flex;
+        gap: 1rem;
+    }
+
+    .navlinks a {
+        font-size: 1rem;
+    }
+
+    .home {
+        padding-top: 85px;
+    }
+
+    .landing,
+    .secondary {
+        position: relative;
+        flex-direction: column;
+        padding: 3rem 1.5rem;
+        gap: 1.5rem;
+        text-align: center;
+        align-items: center;
+    }
+
+    .description,
+    .description-secondary {
+        max-width: 100%;
+        margin: 0;
+        align-items: center;
+        text-align: center;
+    }
+
+    .description h1,
+    .description-secondary h1 {
+        font-size: 3rem;
+        line-height: 1.2;
+    }
+
+    .description p,
+    .description-secondary p {
+        font-size: 1.4rem;
+    }
+
+    .description button {
+        font-size: 1.8rem;
+        padding: 0.8rem 1.2rem;
+    }
+
+    .floating-img-one,
+    .floating-img-two {
+        position: absolute;
+        z-index: 20;
+        margin: 0;
+        max-width: 90vw;
+        overflow: hidden;
+    }
+
+    .floating-img-one {
+        top: 470px;
+        left: 80px;
+        width: 180px !important;
+        transform: translateX(-50%) rotate(-10deg);
+    }
+
+    .floating-img-two {
+        top: 100px;
+        left: 180px;
+        width: 250px !important;
+    }
+
+    .landing-frame,
+    .secondary-frame {
+        margin: 1.5rem 0;
+        width: 90%;
+        height: auto;
+        border-width: 8px;
+        filter: drop-shadow(15px 15px #2C4EF7);
+    }
+
+    .secondary-frame {
+        filter: drop-shadow(15px 15px #0B0071);
+    }
+
+    .landing-frame img{
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .secondary-frame img{
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        object-position: 0px 0px;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5rem;
+        padding: 30px 30px;
+    }
+
+    footer p{
+        padding: 0 5rem;
+    }
+}
